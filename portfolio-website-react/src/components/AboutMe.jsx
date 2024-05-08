@@ -9,9 +9,6 @@ import { Box } from "@mui/material";
 import ReactRotatingText from "react-rotating-text";
 
 function AboutMe() {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
-
   return (
     <Box
       sx={{ mt: "6%", justifyContent: "center" }}

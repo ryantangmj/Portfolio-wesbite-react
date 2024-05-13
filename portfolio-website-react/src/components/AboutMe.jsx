@@ -34,14 +34,6 @@ function AboutMe() {
             cursor={true}
           />
         </h1>
-        <div class="btn-container">
-          <Button
-            variant="contained"
-            sx={{ borderRadius: 10, backgroundColor: "#112D4E" }}
-          >
-            Contact Info
-          </Button>
-        </div>
         <div id="socials-container">
           <a
             href="https://www.linkedin.com/in/ryantangmj"

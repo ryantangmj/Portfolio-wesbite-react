@@ -23,7 +23,7 @@ function Experience() {
         position="alternate"
       >
         <h1> My Experiences </h1>
-        <TimelineItem sx={{ mt: "2%" }}>
+        <TimelineItem sx={{ mt: "1%" }}>
           <TimelineOppositeContent
             sx={{ py: "3.8%" }}
             align="right"
@@ -33,7 +33,7 @@ function Experience() {
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineConnector
-              sx={{ backgroundColor: "#112D4E", minHeight: "20px" }}
+              sx={{ backgroundColor: "#365486", minHeight: "20px" }}
             />
             <TimelineDot sx={{ p: 1.5, backgroundColor: "#112D4E" }}>
               <img
@@ -42,7 +42,7 @@ function Experience() {
               />
             </TimelineDot>
             <TimelineConnector
-              sx={{ backgroundColor: "#112D4E", minHeight: "40px" }}
+              sx={{ backgroundColor: "#365486", minHeight: "40px" }}
             />
           </TimelineSeparator>
           <TimelineContent sx={{ py: "3%", px: 2 }}>
@@ -67,7 +67,7 @@ function Experience() {
               />
             </TimelineDot>
             <TimelineConnector
-              sx={{ backgroundColor: "#112D4E", minHeight: "40px" }}
+              sx={{ backgroundColor: "#365486", minHeight: "40px" }}
             />
           </TimelineSeparator>
           <TimelineContent sx={{ py: "12px", px: 2 }}>
@@ -96,7 +96,7 @@ function Experience() {
               />
             </TimelineDot>
             <TimelineConnector
-              sx={{ backgroundColor: "#112D4E", minHeight: "40px" }}
+              sx={{ backgroundColor: "#365486", minHeight: "40px" }}
             />
           </TimelineSeparator>
           <TimelineContent sx={{ py: "12px", px: 2 }}>
@@ -118,7 +118,7 @@ function Experience() {
             Dec 2020 - Dec 2020
           </TimelineOppositeContent>
           <TimelineSeparator>
-            <TimelineConnector sx={{ backgroundColor: "#112D4E" }} />
+            <TimelineConnector sx={{ backgroundColor: "#365486" }} />
             <TimelineDot sx={{ p: 1.5, backgroundColor: "#112D4E" }}>
               <img
                 src="https://res.cloudinary.com/dorg7gesr/image/upload/v1715163000/LTA-logo-1_rljf28.jpg"
@@ -126,7 +126,7 @@ function Experience() {
               />
             </TimelineDot>
             <TimelineConnector
-              sx={{ backgroundColor: "#112D4E", minHeight: "20px" }}
+              sx={{ backgroundColor: "#365486", minHeight: "20px" }}
             />
           </TimelineSeparator>
           <TimelineContent sx={{ py: "12px", px: 2 }}>

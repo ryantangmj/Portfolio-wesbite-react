@@ -2,8 +2,8 @@ import "./App.css";
 import ResponsiveAppBar from "./components/Navbar";
 import AboutMe from "./components/AboutMe";
 import Experience from "./components/Experience";
-import MediaCard from "./components/MediaCard";
 import Projects from "./components/Projects";
+import ContactMe from "./components/ContactMe";
 
 function App() {
   return (
@@ -12,6 +12,7 @@ function App() {
       <AboutMe />
       <Experience />
       <Projects />
+      <ContactMe />
     </div>
   );
 }

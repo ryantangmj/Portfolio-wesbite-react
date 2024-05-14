@@ -38,7 +38,6 @@ export default function ItemCard({ projectDetails }) {
       {projectDetails.map((projectDetail, index) => {
         const images = projectDetail.imgSrc; // Assuming imgSrcs is an array of image URLs
 
-        console.log(images);
         return (
           <Card
             key={index}
@@ -79,7 +78,7 @@ export default function ItemCard({ projectDetails }) {
                           height: "auto",
                           maxHeight: 500,
                           objectFit: "contain",
-                          ml: 6.6,
+                          ml: 6,
                         }}
                         image={src}
                         alt={`Project Image ${idx + 1}`}

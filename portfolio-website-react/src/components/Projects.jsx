@@ -1,3 +1,4 @@
+import Box from "@mui/material/Box";
 import MediaCard from "./MediaCard";
 
 function Projects() {
@@ -12,6 +13,7 @@ function Projects() {
         "Express.js",
         "MongoDB",
         "CSS",
+        "Python",
         "Material-UI",
         "React Router",
         "Cloudinary",
@@ -91,10 +93,10 @@ function Projects() {
   ];
 
   return (
-    <>
+    <Box sx={{ mt: 10 }}>
       <h1> My Projects </h1>
       <MediaCard projectDetails={projectDetails} />
-    </>
+    </Box>
   );
 }
 

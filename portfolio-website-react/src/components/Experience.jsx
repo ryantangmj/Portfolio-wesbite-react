@@ -21,7 +21,7 @@ function Experience() {
         variant="h1"
         fontFamily="'Helvetica Neue', Helvetica, Arial, sans-serif"
         sx={{
-          mt: "-5%",
+          mt: isMobile ? "-15%" : "-5%",
           fontSize: isMobile ? "1rem" : "1.8rem",
           fontWeight: "bold",
         }}
@@ -38,9 +38,9 @@ function Experience() {
       >
         <TimelineItem sx={{ mt: "1%" }}>
           <TimelineOppositeContent
-            sx={{ py: "3.8%" }}
+            sx={{ py: isMobile ? "11%" : "3.8%" }}
             align="right"
-            variant="body1"
+            variant={isMobile ? "body4" : "body1"}
           >
             May 2024 - Aug 2024
           </TimelineOppositeContent>
@@ -69,7 +69,10 @@ function Experience() {
           </TimelineContent>
         </TimelineItem>
         <TimelineItem>
-          <TimelineOppositeContent sx={{ py: "2%" }} variant="body1">
+          <TimelineOppositeContent
+            sx={{ py: isMobile ? "8%" : "2%" }}
+            variant={isMobile ? "body4" : "body1"}
+          >
             Apr 2024 - May 2024
           </TimelineOppositeContent>
           <TimelineSeparator>
@@ -95,9 +98,9 @@ function Experience() {
         </TimelineItem>
         <TimelineItem>
           <TimelineOppositeContent
-            sx={{ py: "2%" }}
+            sx={{ py: isMobile ? "6%" : "2%" }}
+            variant={isMobile ? "body4" : "body1"}
             align="right"
-            variant="body1"
           >
             Aug 2023 - Dec 2024
           </TimelineOppositeContent>
@@ -124,9 +127,9 @@ function Experience() {
         </TimelineItem>
         <TimelineItem>
           <TimelineOppositeContent
-            sx={{ py: "2.5%" }}
+            sx={{ py: isMobile ? "17%" : "2.5%" }}
+            variant={isMobile ? "body4" : "body1"}
             align="right"
-            variant="body1"
           >
             Dec 2020 - Dec 2020
           </TimelineOppositeContent>
@@ -142,7 +145,7 @@ function Experience() {
               sx={{ backgroundColor: "#365486", minHeight: "20px" }}
             />
           </TimelineSeparator>
-          <TimelineContent sx={{ py: "12px", px: 2 }}>
+          <TimelineContent sx={{ py: isMobile ? "7%" : "1%", px: 2 }}>
             <Typography variant="h7" fontWeight="bold" component="span">
               Engineer Intern
             </Typography>

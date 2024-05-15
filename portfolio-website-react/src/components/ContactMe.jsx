@@ -1,8 +1,13 @@
 import ContactMailIcon from "@mui/icons-material/ContactMail";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { useTheme, createTheme, ThemeProvider } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import { Box, Link, Paper } from "@mui/material";
 
 function ContactMe() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
     <Box
       sx={{
@@ -14,7 +19,7 @@ function ContactMe() {
         height: "80vh",
       }}
     >
-      <Box sx={{ mt: "-5%" }}>
+      <Box sx={{ mt: isMobile ? "-1%" : "-5%" }}>
         <p>Get in Touch</p>
         <h2>Contact Me</h2>
         <Paper

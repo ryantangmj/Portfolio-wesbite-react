@@ -65,6 +65,7 @@ function ResponsiveAppBar() {
                     duration={500}
                     offset={-64} // Adjust this value based on your AppBar height
                     style={{ textDecoration: "none", color: "#112D4E" }}
+                    onClick={handleCloseNavMenu}
                   >
                     <Typography textAlign="center">{page}</Typography>
                   </ScrollLink>

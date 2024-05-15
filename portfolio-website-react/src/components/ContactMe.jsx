@@ -16,10 +16,10 @@ function ContactMe() {
         justifyContent: "center",
         alignItems: "center",
         textAlign: "center",
-        height: "80vh",
+        height: isMobile ? "85vh" : "80vh",
       }}
     >
-      <Box sx={{ mt: isMobile ? "-1%" : "-5%" }}>
+      <Box sx={{ mt: isMobile ? "-8%" : "-5%" }}>
         <p>Get in Touch</p>
         <h2>Contact Me</h2>
         <Paper

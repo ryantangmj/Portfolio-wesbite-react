@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.425e86b5.css",
-    "main.js": "/static/js/main.cb198058.js",
-    "static/js/453.720c0f40.chunk.js": "/static/js/453.720c0f40.chunk.js",
-    "index.html": "/index.html",
-    "main.425e86b5.css.map": "/static/css/main.425e86b5.css.map",
-    "main.cb198058.js.map": "/static/js/main.cb198058.js.map",
-    "453.720c0f40.chunk.js.map": "/static/js/453.720c0f40.chunk.js.map"
+    "main.css": "/Portfolio-wesbite-react/static/css/main.425e86b5.css",
+    "main.js": "/Portfolio-wesbite-react/static/js/main.972f356a.js",
+    "static/js/453.720c0f40.chunk.js": "/Portfolio-wesbite-react/static/js/453.720c0f40.chunk.js",
+    "index.html": "/Portfolio-wesbite-react/index.html",
+    "main.425e86b5.css.map": "/Portfolio-wesbite-react/static/css/main.425e86b5.css.map",
+    "main.972f356a.js.map": "/Portfolio-wesbite-react/static/js/main.972f356a.js.map",
+    "453.720c0f40.chunk.js.map": "/Portfolio-wesbite-react/static/js/453.720c0f40.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.425e86b5.css",
-    "static/js/main.cb198058.js"
+    "static/js/main.972f356a.js"
   ]
 }

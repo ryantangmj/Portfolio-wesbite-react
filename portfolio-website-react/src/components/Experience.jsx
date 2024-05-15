@@ -22,7 +22,7 @@ function Experience() {
         fontFamily="'Helvetica Neue', Helvetica, Arial, sans-serif"
         sx={{
           mt: isMobile ? "-15%" : "-5%",
-          fontSize: isMobile ? "1rem" : "1.8rem",
+          fontSize: isMobile ? "1.5rem" : "1.8rem",
           fontWeight: "bold",
         }}
       >

@@ -45,7 +45,7 @@ export default function ItemCard({ projectDetails }) {
               position: "relative",
               width: isMobile ? 300 : "90%",
               borderRadius: "8px",
-              m: 5,
+              my: 3,
               ":hover": {
                 boxShadow: 20,
               },
@@ -126,7 +126,6 @@ export default function ItemCard({ projectDetails }) {
                     direction="row"
                     sx={{
                       flexWrap: "wrap",
-                      maxWidth: "100%",
                     }}
                   >
                     {projectDetail.techStack.map((tech, idx) => (

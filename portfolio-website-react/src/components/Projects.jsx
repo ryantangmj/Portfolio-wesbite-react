@@ -1,4 +1,7 @@
 import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import { useTheme, createTheme, ThemeProvider } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import MediaCard from "./MediaCard";
 
 function Projects() {
@@ -92,9 +95,22 @@ function Projects() {
     },
   ];
 
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
     <Box sx={{ mt: 10 }}>
-      <h1> My Projects </h1>
+      <Typography
+        variant="h1"
+        fontFamily="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        sx={{
+          mt: "-5%",
+          fontSize: isMobile ? "1rem" : "1.8rem",
+          fontWeight: "bold",
+        }}
+      >
+        My Projects
+      </Typography>
       <MediaCard projectDetails={projectDetails} />
     </Box>
   );

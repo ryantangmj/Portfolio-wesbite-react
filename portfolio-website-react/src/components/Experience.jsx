@@ -7,22 +7,35 @@ import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import Typography from "@mui/material/Typography";
+import { useTheme, createTheme, ThemeProvider } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { Container } from "@mui/material";
 
 function Experience() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
-    <div style={{ width: "100vw", height: "100vh" }}>
+    <Container sx={{ height: "100vh" }}>
+      <Typography
+        variant="h1"
+        fontFamily="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        sx={{
+          mt: "-5%",
+          fontSize: isMobile ? "1rem" : "1.8rem",
+          fontWeight: "bold",
+        }}
+      >
+        My Experiences
+      </Typography>
       <Timeline
         sx={{
-          py: "2.9%",
-          height: "100%",
-          width: "100%",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
         }}
         position="alternate"
       >
-        <h1> My Experiences </h1>
         <TimelineItem sx={{ mt: "1%" }}>
           <TimelineOppositeContent
             sx={{ py: "3.8%" }}
@@ -140,7 +153,7 @@ function Experience() {
           </TimelineContent>
         </TimelineItem>
       </Timeline>
-    </div>
+    </Container>
   );
 }
 

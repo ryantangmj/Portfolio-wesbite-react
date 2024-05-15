@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link as ScrollLink } from "react-scroll";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -11,6 +12,7 @@ import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 
 const pages = ["About Me", "Experience", "Projects", "Contact Me"];
+const pageIds = ["aboutme", "experience", "projects", "contactme"];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -55,23 +57,37 @@ function ResponsiveAppBar() {
                 display: { xs: "block", md: "none" },
               }}
             >
-              {pages.map((page) => (
+              {pages.map((page, index) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center" sx={{ color: "#112D4E" }}>
-                    {page}
-                  </Typography>
+                  <ScrollLink
+                    to={pageIds[index]}
+                    smooth={true}
+                    duration={500}
+                    offset={-64} // Adjust this value based on your AppBar height
+                    style={{ textDecoration: "none", color: "#112D4E" }}
+                  >
+                    <Typography textAlign="center">{page}</Typography>
+                  </ScrollLink>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {pages.map((page) => (
+            {pages.map((page, index) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "#F9F7F7", display: "block" }}
               >
-                {page}
+                <ScrollLink
+                  to={pageIds[index]}
+                  smooth={true}
+                  duration={500}
+                  offset={-64} // Adjust this value based on your AppBar height
+                  style={{ textDecoration: "none", color: "#F9F7F7" }}
+                >
+                  {page}
+                </ScrollLink>
               </Button>
             ))}
           </Box>
@@ -80,4 +96,5 @@ function ResponsiveAppBar() {
     </AppBar>
   );
 }
+
 export default ResponsiveAppBar;

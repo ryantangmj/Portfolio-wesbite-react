@@ -1,6 +1,5 @@
 import * as React from "react";
 import Avatar from "@mui/material/Avatar";
-import Button from "@mui/material/Button";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -11,7 +10,12 @@ import ReactRotatingText from "react-rotating-text";
 function AboutMe() {
   return (
     <Box
-      sx={{ mt: "6%", justifyContent: "center" }}
+      sx={{
+        height: "100vh",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
       display="flex"
       flexDirection="column"
     >

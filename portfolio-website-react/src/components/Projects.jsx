@@ -1,6 +1,7 @@
+import * as React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import { useTheme, createTheme, ThemeProvider } from "@mui/material/styles";
+import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import MediaCard from "./MediaCard";
 
@@ -111,7 +112,9 @@ function Projects() {
       >
         My Projects
       </Typography>
-      <MediaCard projectDetails={projectDetails} />
+      {projectDetails.map((project, index) => (
+        <MediaCard key={index} projectDetail={project} index={index} />
+      ))}
     </Box>
   );
 }

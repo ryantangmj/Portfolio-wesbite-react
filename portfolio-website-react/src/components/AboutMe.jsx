@@ -2,10 +2,9 @@ import * as React from "react";
 import Avatar from "@mui/material/Avatar";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import useMediaQuery from "@mui/material/useMediaQuery";
-import { useTheme } from "@mui/material/styles";
 import { Box } from "@mui/material";
 import ReactRotatingText from "react-rotating-text";
+import { motion } from "framer-motion";
 
 function AboutMe() {
   return (
@@ -15,6 +14,7 @@ function AboutMe() {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
+        mt: -2,
       }}
       display="flex"
       flexDirection="column"
@@ -39,24 +39,30 @@ function AboutMe() {
           />
         </h1>
         <div id="socials-container">
-          <a
+          <motion.a
             href="https://www.linkedin.com/in/ryantangmj"
             target="_blank"
             rel="noopener noreferrer"
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.8 }}
+            style={{ display: "inline-block" }}
           >
             <LinkedInIcon
               sx={{ fontSize: 40, color: "#112D4E", mt: 1, p: 0.5 }}
             />
-          </a>
-          <a
+          </motion.a>
+          <motion.a
             href="https://github.com/ryantangmj"
             target="_blank"
             rel="noopener noreferrer"
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.8 }}
+            style={{ display: "inline-block" }}
           >
             <GitHubIcon
               sx={{ fontSize: 40, color: "#112D4E", mt: 1, p: 0.5 }}
             />
-          </a>
+          </motion.a>
         </div>
       </Box>
     </Box>

@@ -10,6 +10,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
+import { motion } from "framer-motion";
 
 const pages = ["About Me", "Experience", "Projects", "Contact Me"];
 const pageIds = ["aboutme", "experience", "projects", "contactme"];
@@ -22,6 +23,11 @@ function ResponsiveAppBar() {
   };
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
+  };
+
+  const variants = {
+    open: { opacity: 1, x: 0 },
+    closed: { opacity: 0, x: "-100%" },
   };
 
   return (

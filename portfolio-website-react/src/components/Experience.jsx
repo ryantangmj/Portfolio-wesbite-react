@@ -60,7 +60,7 @@ function Experience() {
           initial="hidden"
           animate={controls}
           variants={itemVariants}
-          transition={{ duration: 0.5, delay: 0.2 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
         >
           <TimelineItem sx={{ mt: "1%" }}>
             <TimelineOppositeContent

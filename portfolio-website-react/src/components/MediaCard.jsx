@@ -54,7 +54,7 @@ export default function ItemCard({ projectDetail, index }) {
       initial="hidden"
       animate={controls}
       variants={itemVariants}
-      transition={{ duration: 0.5, delay: index * 0.2 }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
     >
       <Box
         sx={{

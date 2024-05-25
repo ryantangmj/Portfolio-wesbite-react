@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Portfolio-wesbite-react/static/css/main.425e86b5.css",
+    "main.js": "/Portfolio-wesbite-react/static/js/main.688a4aad.js",
+    "static/js/453.720c0f40.chunk.js": "/Portfolio-wesbite-react/static/js/453.720c0f40.chunk.js",
+    "index.html": "/Portfolio-wesbite-react/index.html",
+    "main.425e86b5.css.map": "/Portfolio-wesbite-react/static/css/main.425e86b5.css.map",
+    "main.688a4aad.js.map": "/Portfolio-wesbite-react/static/js/main.688a4aad.js.map",
+    "453.720c0f40.chunk.js.map": "/Portfolio-wesbite-react/static/js/453.720c0f40.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.425e86b5.css",
+    "static/js/main.688a4aad.js"
+  ]
+}

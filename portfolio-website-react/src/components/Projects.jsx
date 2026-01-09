@@ -105,9 +105,12 @@ function Projects() {
         variant="h1"
         fontFamily="'Helvetica Neue', Helvetica, Arial, sans-serif"
         sx={{
-          mt: "-5%",
-          fontSize: isMobile ? "1.5rem" : "1.8rem",
+          pt: isMobile ? 3 : 7,
+          mb: 5,
+          fontSize: isMobile ? "2rem" : "2.5rem",
           fontWeight: "bold",
+          textAlign: "center",
+          color: "#112D4E",
         }}
       >
         My Projects

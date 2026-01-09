@@ -69,11 +69,16 @@ function ResponsiveAppBar() {
                     to={pageIds[index]}
                     smooth={true}
                     duration={500}
-                    offset={-64} // Adjust this value based on your AppBar height
+                    offset={0} // Adjust this value based on your AppBar height
                     style={{ textDecoration: "none", color: "#112D4E" }}
                     onClick={handleCloseNavMenu}
                   >
-                    <Typography textAlign="center">{page}</Typography>
+                    <Typography
+                      textAlign="center"
+                      fontFamily="nunito, sans-serif"
+                    >
+                      {page}
+                    </Typography>
                   </ScrollLink>
                 </MenuItem>
               ))}
@@ -84,13 +89,19 @@ function ResponsiveAppBar() {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "#F9F7F7", display: "block" }}
+                sx={{
+                  my: 2,
+                  color: "#F9F7F7",
+                  display: "block",
+                  fontFamily: "nunito, sans-serif",
+                  fontWeight: 700,
+                }}
               >
                 <ScrollLink
                   to={pageIds[index]}
                   smooth={true}
                   duration={500}
-                  offset={-64} // Adjust this value based on your AppBar height
+                  offset={0} // Adjust this value based on your AppBar height
                   style={{ textDecoration: "none", color: "#F9F7F7" }}
                 >
                   {page}

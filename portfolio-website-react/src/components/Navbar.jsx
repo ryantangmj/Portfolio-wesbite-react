@@ -10,7 +10,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import { motion } from "framer-motion";
 
 const pages = ["About Me", "Experience", "Projects", "Contact Me"];
 const pageIds = ["aboutme", "experience", "projects", "contactme"];
@@ -31,7 +30,16 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static" sx={{ width: "100%", bgcolor: "#112D4E" }}>
+    <AppBar
+      position="sticky"
+      sx={{
+        width: "100%",
+        bgcolor: "rgba(17, 45, 78, 0.9)",
+        backdropFilter: "blur(10px)",
+        boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+        top: 0,
+      }}
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -69,14 +77,11 @@ function ResponsiveAppBar() {
                     to={pageIds[index]}
                     smooth={true}
                     duration={500}
-                    offset={0} // Adjust this value based on your AppBar height
+                    offset={0}
                     style={{ textDecoration: "none", color: "#112D4E" }}
                     onClick={handleCloseNavMenu}
                   >
-                    <Typography
-                      textAlign="center"
-                      fontFamily="nunito, sans-serif"
-                    >
+                    <Typography textAlign="center" fontFamily="inherit">
                       {page}
                     </Typography>
                   </ScrollLink>
@@ -93,7 +98,7 @@ function ResponsiveAppBar() {
                   my: 2,
                   color: "#F9F7F7",
                   display: "block",
-                  fontFamily: "nunito, sans-serif",
+                  fontFamily: "inherit",
                   fontWeight: 700,
                 }}
               >
@@ -101,7 +106,7 @@ function ResponsiveAppBar() {
                   to={pageIds[index]}
                   smooth={true}
                   duration={500}
-                  offset={0} // Adjust this value based on your AppBar height
+                  offset={0}
                   style={{ textDecoration: "none", color: "#F9F7F7" }}
                 >
                   {page}

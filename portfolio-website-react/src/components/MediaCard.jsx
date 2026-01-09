@@ -18,18 +18,18 @@ import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-export default function ItemCard({ projectDetail, index }) {
+const chipTheme = createTheme({
+  palette: {
+    primary: {
+      main: "#365486",
+    },
+  },
+});
+
+export default function MediaCard({ projectDetail, index }) {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const images = projectDetail.imgSrc;
-
-  const palette = createTheme({
-    palette: {
-      primary: {
-        main: "#365486",
-      },
-    },
-  });
 
   const controls = useAnimation();
   const [ref, inView] = useInView({
@@ -72,10 +72,17 @@ export default function ItemCard({ projectDetail, index }) {
             borderRadius: "8px",
             my: 3,
             ":hover": {
-              boxShadow: 20,
+              boxShadow: "0 20px 40px rgba(0,0,0,0.2)",
+              transform: "translateY(-5px)",
+              transition: "all 0.3s ease-in-out",
             },
             display: "flex",
-            flexDirection: isMobile ? "column" : "row",
+            flexDirection: isMobile
+              ? "column"
+              : index % 2 === 0
+              ? "row"
+              : "row-reverse",
+            alignItems: "center",
           }}
         >
           <Box
@@ -124,14 +131,14 @@ export default function ItemCard({ projectDetail, index }) {
             >
               <Typography
                 component="div"
-                fontFamily="'Helvetica Neue', Helvetica, Arial, sans-serif"
+                fontFamily="inherit"
                 sx={{
                   fontSize: isMobile ? "1rem" : "1.5rem",
                   fontWeight: "bold",
                   lineHeight: "1.4",
                   mb: "8px",
                   color: "#333",
-                  alignItems: "center",
+                  textAlign: isMobile ? "center" : "left",
                 }}
               >
                 {projectDetail.title}
@@ -146,12 +153,12 @@ export default function ItemCard({ projectDetail, index }) {
                     fontSize: "1rem",
                     color: "#666",
                   }}
-                  fontFamily="'Helvetica Neue', Helvetica, Arial, sans-serif"
+                  fontFamily="inherit"
                 >
                   {projectDetail.description}
                 </Typography>
               )}
-              <ThemeProvider theme={palette}>
+              <ThemeProvider theme={chipTheme}>
                 <Stack
                   direction="row"
                   sx={{
@@ -171,7 +178,7 @@ export default function ItemCard({ projectDetail, index }) {
               </ThemeProvider>
               {isMobile ? (
                 <Link
-                  sx={{ mt: "5%", display: "block" }}
+                  sx={{ mt: "5%", display: "block", textAlign: "center" }}
                   href={projectDetail.githubLink}
                   target="_blank"
                   rel="noopener noreferrer"

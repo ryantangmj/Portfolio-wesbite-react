@@ -12,7 +12,7 @@ export default function Footer() {
         fontFamily={"nunito, sans-serif"}
       >
         {"Copyright © "}
-        Ryan Tang &nbsp;
+        Ryan Tang&nbsp;
         {new Date().getFullYear()}. All Rights Reserved.
       </Typography>
     </Box>
